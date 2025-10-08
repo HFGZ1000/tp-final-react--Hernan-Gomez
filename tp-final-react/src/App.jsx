@@ -1,21 +1,28 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./assets/components/Header";
+import Footer from "./assets/components/Footer";
+import Home from "./Home";
+import PokemonList from "./PokemonList";
+import PokemonDetail from "./PokemonDetail";
+import "./index.css";
 
 function App() {
   return (
-    <>
-      <Router>
+    <Router>
+      <div className="app">
         <Header />
-        <div className="app">
-          {/* Las rutas definen qué se muestra según la URL */}
+
+        <main className="main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pokemon" element={<PokemonList />} />
             <Route path="/pokemon/:id" element={<PokemonDetail />} />
           </Routes>
-        </div>
+        </main>
+
         <Footer />
-      </Router>
-    </>
+      </div>
+    </Router>
   );
 }
 
