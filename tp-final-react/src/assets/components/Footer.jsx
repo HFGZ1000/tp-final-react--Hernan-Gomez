@@ -1,7 +1,8 @@
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2024 - Mi Pokédex</p>
+      <p>&copy; 2025 HFG. Todos los derechos reservados.</p>
+      <span>Trabajo Practico Final Integrador</span>
     </footer>
   );
 };
