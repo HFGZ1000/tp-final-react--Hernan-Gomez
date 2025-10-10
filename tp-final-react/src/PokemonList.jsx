@@ -8,6 +8,12 @@ const PokemonList = () => {
   const [error, setError] = useState(null);
   const [nextUrl, setNextUrl] = useState(null);
 
+  const getPokemonIdFromUrl = (url) => {
+    const urlParts = url.split("/");
+
+    return urlParts[6];
+  };
+
   useEffect(() => {
     const fetchPokemons = async () => {
       try {
@@ -78,8 +84,8 @@ const PokemonList = () => {
       <p className="pokemon-count">Mostrando {pokemons.length} Pokémon</p>
 
       <div className="pokemon-grid">
-        {pokemons.map((pokemon, index) => {
-          const pokemonId = index + 1;
+        {pokemons.map((pokemon) => {
+          const pokemonId = getPokemonIdFromUrl(pokemon.url);
 
           return (
             <Link
@@ -88,8 +94,11 @@ const PokemonList = () => {
               className="pokemon-card"
             >
               <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`}
                 alt={pokemon.name}
+                onError={(e) => {
+                  e.target.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
+                }}
               />
               <h3>{pokemon.name}</h3>
               <span>#{pokemonId.toString().padStart(3, "0")}</span>
