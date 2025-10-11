@@ -79,10 +79,8 @@ const PokemonDetail = () => {
             #{pokemon.id.toString().padStart(3, "0")}
           </span>
         </div>
-        <img
-          src="https://www.pngkey.com/png/detail/33-336727_svg-transparent-stock-oykawoo-explore-on-deviantart-blue.png"
-          alt="Pokeball"
-        />
+
+        <img src="/public/Pokeball2.png" alt="Pokeball" />
       </div>
 
       <div className="detail-content">

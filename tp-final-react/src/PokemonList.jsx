@@ -81,6 +81,9 @@ const PokemonList = () => {
   return (
     <div className="pokemon-list">
       <h2>Lista de Pokémon</h2>
+      <p className="subtitle">
+        Haz click en cualquier Pokémon para ver sus detalles
+      </p>
       <p className="pokemon-count">Mostrando {pokemons.length} Pokémon</p>
 
       <div className="pokemon-grid">
