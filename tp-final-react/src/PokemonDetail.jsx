@@ -80,7 +80,7 @@ const PokemonDetail = () => {
           </span>
         </div>
 
-        <img src="/public/Pokeball2.png" alt="Pokeball" />
+        <img src="/Pokeball2.png" alt="Pokeball" />
       </div>
 
       <div className="detail-content">
