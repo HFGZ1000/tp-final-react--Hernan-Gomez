@@ -61,8 +61,6 @@ Paleta de Colores
 
     Azules Gradientes: Header y footer
 
-    Amarillos Vibrantes: Hero section y cards
-
     Efectos Neon: Bordes brillantes y sombras
 
     Tipografía: Segoe UI para mejor legibilidad
